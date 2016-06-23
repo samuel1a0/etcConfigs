@@ -1,0 +1,12 @@
+# /dev/sda2
+UUID=f3ff7f95-7068-4a92-9de5-162dcd62014a	/         	ext4      	rw,relatime,data=ordered	0 1
+
+# /dev/sda1
+UUID=1d459a25-2494-4bef-8bcb-b81c8da622f6	/boot     	ext4      	rw,relatime,data=ordered	0 2
+
+# /dev/sda3
+UUID=70a4662f-eb5d-4230-97d1-5081bd0c8823	/home     	ext4      	rw,relatime,data=ordered	0 2
+
+# /dev/sda4
+UUID=7db4c7ed-67fb-4e42-9b34-7f8b68cadd7c	none      	swap      	defaults  	0 0
+
