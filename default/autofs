@@ -12,3 +12,6 @@ USE_MISC_DEVICE="yes"
 #
 #OPTIONS=""
 #
+TIMEOUT=1
+
+daemonoptions='-g'
