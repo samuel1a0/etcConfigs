@@ -4,8 +4,6 @@
 ## Generated on 2016-04-01
 ##
 
-## Score: 1.7, Brazil
-Server = http://archlinux.c3sl.ufpr.br/$repo/os/$arch
 ## Score: 0.4, Bulgaria
 Server = http://mirrors.uni-plovdiv.net/archlinux/$repo/os/$arch
 ## Score: 0.4, Netherlands
@@ -158,6 +156,8 @@ Server = http://mirror.pseudoform.org/$repo/os/$arch
 Server = http://ftp.wa.co.za/pub/archlinux/$repo/os/$arch
 ## Score: 1.7, United States
 Server = http://mirror.jmu.edu/pub/archlinux/$repo/os/$arch
+## Score: 1.7, Brazil
+Server = http://archlinux.c3sl.ufpr.br/$repo/os/$arch
 ## Score: 1.7, Poland
 Server = http://ftp.vectranet.pl/archlinux/$repo/os/$arch
 ## Score: 1.7, Germany
