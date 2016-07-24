@@ -7,6 +7,10 @@ umask 022
 PATH="/usr/local/sbin:/usr/local/bin:/usr/bin"
 export PATH
 
+# Setting JRE path
+#JAVA_HOME="/usr/lib/jvm/java-8-openjdk/jre"
+#export JAVA_HOME
+
 # Load profiles from /etc/profile.d
 if test -d /etc/profile.d/; then
 	for profile in /etc/profile.d/*.sh; do
