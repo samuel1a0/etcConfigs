@@ -1,7 +1,7 @@
 Description='Automatically generated profile by wifi-menu'
 Interface=wlp3s0
 Connection=wireless
-Security=wpa
-ESSID=UnicoAP
+Security=none
+ESSID=Visitors_Invemar
 IP=dhcp
-Key=ecohostelunico
+

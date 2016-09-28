@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wlp3s0
+Connection=wireless
+Security=wpa
+ESSID=H_MEDELLIN
+IP=dhcp
+Key=m3d3ll1n
