@@ -50,3 +50,4 @@ colord:!::
 rtkit:!::
 nvidia-persistenced:!::
 bumblebee:!::samuel
+postgres:!::
