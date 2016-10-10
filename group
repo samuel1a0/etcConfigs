@@ -52,3 +52,4 @@ nvidia-persistenced:x:143:
 bumblebee:x:56:samuel
 postgres:x:88:
 vboxusers:x:108:
+tox-bootstrapd:x:994:

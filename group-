@@ -51,3 +51,4 @@ rtkit:x:133:
 nvidia-persistenced:x:143:
 bumblebee:x:56:samuel
 postgres:x:88:
+vboxusers:x:108:
