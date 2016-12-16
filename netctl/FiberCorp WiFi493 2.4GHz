@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wlp3s0
+Connection=wireless
+Security=wpa
+ESSID=FiberCorp\ WiFi493\ 2.4GHz
+IP=dhcp
+Key=0103099900

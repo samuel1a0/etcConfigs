@@ -52,3 +52,5 @@ nvidia-persistenced:!::
 bumblebee:!::samuel
 postgres:!::
 vboxusers:!!::
+tox-bootstrapd:!!::
+docker:!!::
