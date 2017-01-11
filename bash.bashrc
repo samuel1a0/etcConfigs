@@ -5,10 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+[[ $DISPLAY ]] && shopt -s checkwinsize
+
 PS1='[\u@\h \W]\$ '
-PS2='> '
-PS3='> '
-PS4='+ '
 
 case ${TERM} in
   xterm*|rxvt*|Eterm|aterm|kterm|gnome*)

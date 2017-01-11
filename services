@@ -1391,6 +1391,7 @@ puprouter         999/tcp
 puprouter         999/udp
 cadlock2         1000/tcp
 cadlock2         1000/udp
+webpush          1001/tcp
 surf             1010/tcp
 surf             1010/udp
 exp1             1021/tcp
@@ -2395,6 +2396,7 @@ pdap-np          1526/tcp
 pdap-np          1526/udp
 tlisrv           1527/tcp
 tlisrv           1527/udp
+ngr-t            1528/udp
 coauthor         1529/tcp
 coauthor         1529/udp
 rap-service      1530/tcp
@@ -4597,6 +4599,8 @@ sybaseanywhere   2638/tcp
 sybaseanywhere   2638/udp
 aminet           2639/tcp
 aminet           2639/udp
+ami-control      2640/tcp
+ami-control      2640/udp
 hdl-srv          2641/tcp
 hdl-srv          2641/udp
 tragic           2642/tcp
@@ -7793,6 +7797,8 @@ cbp              4419/tcp
 nvm-express      4420/tcp
 nvm-express      4420/udp
 scaleft          4421/tcp
+tsepisp          4422/tcp
+thingkit         4423/tcp
 netrockey6       4425/tcp
 netrockey6       4425/udp
 beacon-port-2    4426/tcp
@@ -7901,6 +7907,7 @@ bmc-reporting    4568/udp
 iax              4569/tcp
 iax              4569/udp
 deploymentmap    4570/tcp
+cardifftec-back  4573/tcp
 rid              4590/tcp
 l3t-at-an        4591/tcp
 l3t-at-an        4591/udp
@@ -8050,6 +8057,10 @@ snap             4752/tcp
 snap             4752/udp
 simon            4753/tcp
 simon-disc       4753/udp
+gre-in-udp       4754/udp
+gre-udp-dtls     4755/udp
+RDCenter         4756/tcp
+converge         4774/tcp
 bfd-multi-ctl    4784/tcp
 bfd-multi-ctl    4784/udp
 cncp             4785/udp
@@ -8768,6 +8779,7 @@ qmvideo          5689/tcp
 qmvideo          5689/udp
 rbsystem         5693/tcp
 kmip             5696/tcp
+supportassist    5700/tcp
 proshareaudio    5713/tcp
 proshareaudio    5713/udp
 prosharevideo    5714/tcp
@@ -9275,8 +9287,7 @@ smc-admin        6787/tcp
 smc-admin        6787/udp
 smc-http         6788/tcp
 smc-http         6788/udp
-smc-https        6789/tcp
-smc-https        6789/udp
+radg             6789/tcp
 hnmp             6790/tcp
 hnmp             6790/udp
 hnm              6791/tcp
@@ -9585,6 +9596,7 @@ sun-user-https   7677/udp
 pando-pub        7680/tcp
 pando-pub        7680/udp
 dmt              7683/tcp
+bolt             7687/tcp
 collaber         7689/tcp
 collaber         7689/udp
 klio             7697/tcp
@@ -10052,6 +10064,8 @@ swa-4            9026/tcp
 swa-4            9026/udp
 versiera         9050/tcp
 fio-cmgmt        9051/tcp
+CardWeb-IO       9060/tcp
+CardWeb-RT       9060/udp
 glrpc            9080/tcp
 glrpc            9080/udp
 lcs-ap           9082/sctp
@@ -10420,6 +10434,7 @@ apollo-relay    10252/udp
 eapol-relay     10253/udp
 axis-wimp-port  10260/tcp
 axis-wimp-port  10260/udp
+tile-ml         10261/tcp
 blocks          10288/tcp
 blocks          10288/udp
 cosir           10321/tcp
@@ -10626,6 +10641,7 @@ vcs-app         14141/tcp
 vcs-app         14141/udp
 icpp            14142/tcp
 icpp            14142/udp
+icpps           14143/tcp
 gcm-app         14145/tcp
 gcm-app         14145/udp
 vrts-tdd        14149/tcp
@@ -10637,6 +10653,7 @@ cps             14250/tcp
 cps             14250/udp
 ca-web-update   14414/tcp
 ca-web-update   14414/udp
+xpra            14500/tcp
 hde-lcesrvr-1   14936/tcp
 hde-lcesrvr-1   14936/udp
 hde-lcesrvr-2   14937/tcp
@@ -10763,6 +10780,8 @@ rds-ib          18634/tcp
 rds-ib          18634/udp
 rds-ip          18635/tcp
 rds-ip          18635/udp
+vdmmesh         18668/tcp
+vdmmesh-disc    18668/udp
 ique            18769/tcp
 ique            18769/udp
 infotos         18881/tcp
@@ -10823,6 +10842,7 @@ mountd          20048/udp
 nfsrdma         20049/tcp
 nfsrdma         20049/udp
 nfsrdma         20049/sctp
+avesterra       20057/tcp
 tolfab          20167/tcp
 tolfab          20167/udp
 ipdtp-port      20202/tcp
@@ -11036,6 +11056,7 @@ voxelstorm      28200/tcp
 voxelstorm      28200/udp
 siemensgsm      28240/tcp
 siemensgsm      28240/udp
+bosswave        28589/tcp
 sgsap           29118/sctp
 otmp            29167/tcp
 otmp            29167/udp
@@ -11077,6 +11098,7 @@ iracinghelper   32034/tcp
 iracinghelper   32034/udp
 t1distproc60    32249/tcp
 t1distproc60    32249/udp
+plex            32400/tcp
 apm-link        32483/tcp
 apm-link        32483/udp
 sec-ntb-clnt    32635/tcp
@@ -11129,6 +11151,7 @@ p-net-local     34378/udp
 p-net-remote    34379/tcp
 p-net-remote    34379/udp
 dhanalakshmi    34567/tcp
+edi_service     34567/udp
 profinet-rt     34962/tcp
 profinet-rt     34962/udp
 profinet-rtm    34963/tcp
@@ -11253,6 +11276,8 @@ rs-status       45002/tcp
 synctest        45045/tcp
 invision-ag     45054/tcp
 invision-ag     45054/udp
+cloudcheck      45514/tcp
+cloudcheck-ping 45514/udp
 eba             45678/tcp
 eba             45678/udp
 dai-shell       45824/tcp
