@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wlp3s0
+Connection=wireless
+Security=wpa
+ESSID=HITRON-5AE0
+IP=dhcp
+Key=ZZNA6HIWFWNF
