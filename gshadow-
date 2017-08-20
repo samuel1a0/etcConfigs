@@ -54,3 +54,4 @@ postgres:!::
 vboxusers:!!::
 tox-bootstrapd:!!::
 docker:!!::samuel
+transmission:!!::
