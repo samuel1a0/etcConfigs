@@ -36,7 +36,7 @@
     <name xml:lang="be">Адкрыць тут тэрмінал</name>
     <name xml:lang="bg">Отваряне на терминал тук</name>
     <name xml:lang="bn">এখানে টার্মিনাল খুলুন</name>
-    <name xml:lang="ca">Obre aquí un Terminal</name>
+    <name xml:lang="ca">Obre un terminal aquí</name>
     <name xml:lang="cs">Otevřít terminál zde</name>
     <name xml:lang="da">Åbn terminal her</name>
     <name xml:lang="de">Terminal hier öffnen</name>
@@ -47,6 +47,7 @@
     <name xml:lang="es">Abrir un terminal aquí</name>
     <name xml:lang="et">Ava terminal siin</name>
     <name xml:lang="eu">Ireki terminala hemen</name>
+    <name xml:lang="fa_IR">باز کردن پایانه در اینجا</name>
     <name xml:lang="fi">Avaa pääte tässä kansiossa</name>
     <name xml:lang="fr">Ouvrir un terminal ici</name>
     <name xml:lang="gl">Abrir aquí unha terminal</name>
@@ -108,7 +109,7 @@
     <description xml:lang="fi">Esimerkki mukautetusta toiminnosta</description>
     <description xml:lang="fr">Exemple d'une action personnalisée</description>
     <description xml:lang="gl">Exemplo dunha acción personalizada</description>
-    <description xml:lang="he">דוגמה של פעולה מותאמת</description>
+    <description xml:lang="he">דוגמה של פעולה מותאמת אישית</description>
     <description xml:lang="hr">Primjer prilagođene radnje</description>
     <description xml:lang="hu">Példa egyéni műveletre</description>
     <description xml:lang="id">Contoh untuk aksi suai</description>

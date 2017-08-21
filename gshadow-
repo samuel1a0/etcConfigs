@@ -52,6 +52,8 @@ nvidia-persistenced:!::
 bumblebee:!::samuel
 postgres:!::
 vboxusers:!!::
-tox-bootstrapd:!!::
 docker:!!::samuel
 transmission:!!::
+wireshark:!::
+kvm:!!::
+usbmux:!::

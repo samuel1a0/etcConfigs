@@ -16,14 +16,26 @@ CC = gcc
 CFLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong $(LTO)
 CPICFLAGS = -fpic
 CPPFLAGS = -D_FORTIFY_SOURCE=2
-CXX = g++
+CXX = g++ 
 CXXCPP = $(CXX) -E
 CXXFLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong $(LTO)
 CXXPICFLAGS = -fpic
-CXX1X = g++
-CXX1XFLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong
-CXX1XPICFLAGS = -fpic
-CXX1XSTD =  
+CXX98 = g++
+CXX98FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong
+CXX98PICFLAGS = -fpic
+CXX98STD = -std=gnu++98
+CXX11 = g++
+CXX11FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong
+CXX11PICFLAGS = -fpic
+CXX11STD = -std=gnu++11
+CXX14 = g++
+CXX14FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong
+CXX14PICFLAGS = -fpic
+CXX14STD = 
+CXX17 = g++
+CXX17FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong
+CXX17PICFLAGS = -fpic
+CXX17STD = -std=gnu++17
 DYLIB_EXT = .so
 DYLIB_LD = $(CC)
 DYLIB_LDFLAGS = -shared -fopenmp# $(CFLAGS) $(CPICFLAGS)
@@ -35,7 +47,7 @@ ECHO_T =
 ## NB, set FC before F77 as on Solaris make, setting FC sets F77
 FC = gfortran
 FCFLAGS = -g -O2 $(LTO)
-## additional libs needed when linking with $(FC), e.g. on Solaris
+## additional libs needed when linking with $(FC), e.g. on some Oracle compilers
 FCLIBS = 
 F77 = gfortran
 F77_VISIBILITY = -fvisibility=hidden
@@ -62,7 +74,7 @@ LIBM = -lm
 LIBR0 = -L$(R_HOME)/lib$(R_ARCH)
 LIBR1 = -lR
 LIBR = -L$(R_HOME)/lib$(R_ARCH) -lR
-LIBS =  -lpcre -llzma -lbz2 -lz -lrt -ldl -lm
+LIBS =  -lpcre -llzma -lbz2 -lz -lrt -ldl -lm -licuuc -licui18n
 ## needed by R CMD config
 LIBnn = lib
 LIBTOOL = $(SHELL) "$(R_HOME)/bin/libtool"
@@ -86,8 +98,14 @@ SHLIB_CFLAGS =
 SHLIB_CXXFLAGS = 
 SHLIB_CXXLD = $(CXX)
 SHLIB_CXXLDFLAGS = -shared
-SHLIB_CXX1XLD = $(CXX1X) $(CXX1XSTD)
-SHLIB_CXX1XLDFLAGS = -shared
+SHLIB_CXX98LD = $(CXX98) $(CXX98STD)
+SHLIB_CXX98LDFLAGS = -shared
+SHLIB_CXX11LD = $(CXX11) $(CXX11STD)
+SHLIB_CXX11LDFLAGS = -shared
+SHLIB_CXX14LD = $(CXX14) $(CXX14STD)
+SHLIB_CXX14LDFLAGS = -shared
+SHLIB_CXX17LD = $(CXX17) $(CXX17STD)
+SHLIB_CXX17LDFLAGS = -shared
 SHLIB_EXT = .so
 SHLIB_FCLD = $(FC)
 SHLIB_FCLDFLAGS = -shared
@@ -108,6 +126,15 @@ TCLTK_CPPFLAGS = -I/usr/include -I/usr/include
 TCLTK_LIBS = -L/usr/lib -ltcl8.6 -L/usr/lib -ltk8.6 -lX11 -lXss -lXext
 YACC = bison -y
 
+## legacy
+CXX1X = g++
+CXX1XFLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong
+CXX1XPICFLAGS = -fpic
+CXX1XSTD = -std=gnu++11
+SHLIB_CXX1XLD = $(CXX11) $(CXX11STD)
+SHLIB_CXX1XLDFLAGS = -shared
+
+
 ## for linking to libR.a
 STATIC_LIBR = # -Wl,--whole-archive "$(R_HOME)/lib$(R_ARCH)/libR.a" -Wl,--no-whole-archive $(BLAS_LIBS) $(FLIBS)  $(LIBINTL) -lreadline  $(LIBS)
 
@@ -117,7 +144,7 @@ R_XTRA_CXXFLAGS =
 R_XTRA_FFLAGS = 
 
 ALL_CFLAGS = $(R_XTRA_CFLAGS) $(PKG_CFLAGS) $(CPICFLAGS) $(SHLIB_CFLAGS) $(CFLAGS)
-ALL_CPPFLAGS = $(R_XTRA_CPPFLAGS) $(PKG_CPPFLAGS) $(CPPFLAGS) $(CLINK_CPPFLAGS)
+ALL_CPPFLAGS = $(R_XTRA_CPPFLAGS) $(PKG_CPPFLAGS) $(CLINK_CPPFLAGS) $(CPPFLAGS)
 ALL_CXXFLAGS = $(R_XTRA_CXXFLAGS) $(PKG_CXXFLAGS) $(CXXPICFLAGS) $(SHLIB_CXXFLAGS) $(CXXFLAGS)
 ALL_OBJCFLAGS = $(PKG_OBJCFLAGS) $(CPICFLAGS) $(SHLIB_CFLAGS) $(OBJCFLAGS)
 ALL_OBJCXXFLAGS = $(PKG_OBJCXXFLAGS) $(CXXPICFLAGS) $(SHLIB_CXXFLAGS) $(OBJCXXFLAGS)

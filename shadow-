@@ -24,4 +24,5 @@ rtkit:!:16968:0:99999:7:::
 nvidia-persistenced:!:16968:0:99999:7:::
 mongodb:!:16995::::::
 postgres:!:17031:0:99999:7:::
-tox-bootstrapd:!!:17084::::::
+transmission:!!:17266::::::
+usbmux:!:17399:0:99999:7:::
