@@ -26,3 +26,4 @@ mongodb:x:995:2::/var/lib/mongodb:/bin/bash
 postgres:x:88:88:PostgreSQL user:/var/lib/postgres:/bin/bash
 transmission:x:169:169:Transmission BitTorrent Daemon:/var/lib/transmission:/sbin/nologin
 usbmux:x:140:140:usbmux user:/:/sbin/nologin
+tox-bootstrapd:x:199:199:Tox bootstrapd:/:/sbin/nologin

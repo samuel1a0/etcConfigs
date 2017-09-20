@@ -58,3 +58,4 @@ wireshark:x:150:
 kvm:x:992:
 usbmux:x:140:
 tox-bootstrapd:x:199:
+plex:x:994:

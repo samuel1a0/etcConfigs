@@ -57,3 +57,4 @@ transmission:!!::
 wireshark:!::
 kvm:!!::
 usbmux:!::
+tox-bootstrapd:!!::
