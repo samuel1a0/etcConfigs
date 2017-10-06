@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wlp3s0
+Connection=wireless
+Security=wpa
+ESSID=DIT-LAB-01
+IP=dhcp
+Key=wifi-lab-01
