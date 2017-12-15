@@ -1,0 +1,7 @@
+Description='Automatically generated profile by wifi-menu'
+Interface=wlp3s0
+Connection=wireless
+Security=wpa
+ESSID=pydata
+IP=dhcp
+Key=0123456789
