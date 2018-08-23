@@ -28,3 +28,4 @@ transmission:x:169:169:Transmission BitTorrent Daemon:/var/lib/transmission:/sbi
 usbmux:x:140:140:usbmux user:/:/sbin/nologin
 tox-bootstrapd:x:199:199:Tox bootstrapd:/:/sbin/nologin
 plex:x:994:994:Plex Media Server:/opt/plexmediaserver:/sbin/nologin
+gdm:x:120:120:Gnome Display Manager:/var/lib/gdm:/sbin/nologin
