@@ -1,6 +1,10 @@
+Section "Files"
+	ModulePath	"/usr/lib/nvidia/xorg"
+EndSection
+
 Section "ServerLayout"
     Identifier  "Layout0"
-    Option      "AutoAddDevices" "false"
+    Option      "AutoAddDevices" "true"
     Option      "AutoAddGPU" "false"
 EndSection
 
@@ -31,4 +35,5 @@ Section "Device"
     Option "NoLogo" "true"
     Option "UseEDID" "false"
     Option "UseDisplayDevice" "none"
+    BusID  "PCI:4:0:0"
 EndSection
