@@ -4,7 +4,7 @@
 #
 # R was configured using the following call
 # (not including env. vars and site configuration)
-# configure  '--prefix=/usr' '--libdir=/usr/lib' '--sysconfdir=/etc/R' '--datarootdir=/usr/share' 'rsharedir=/usr/share/R/' 'rincludedir=/usr/include/R/' 'rdocdir=/usr/share/doc/R/' '--with-x' '--enable-R-shlib' '--with-lapack' '--with-blas' 'F77=gfortran' 'LIBnn=lib' 'CFLAGS=-march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong' 'LDFLAGS=-Wl,-O1,--sort-common,--as-needed,-z,relro' 'CPPFLAGS=-D_FORTIFY_SOURCE=2' 'CXXFLAGS=-march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong'
+# configure  '--prefix=/usr' '--libdir=/usr/lib' '--sysconfdir=/etc/R' '--datarootdir=/usr/share' 'rsharedir=/usr/share/R/' 'rincludedir=/usr/include/R/' 'rdocdir=/usr/share/doc/R/' '--with-x' '--enable-R-shlib' '--with-lapack' '--with-blas' 'F77=gfortran' 'LIBnn=lib' 'CFLAGS=-march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fno-plt' 'LDFLAGS=-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now' 'CPPFLAGS=-D_FORTIFY_SOURCE=2' 'CXXFLAGS=-march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fno-plt'
 
 ## This fails if it contains spaces, or if it is quoted
 include $(R_SHARE_DIR)/make/vars.mk
@@ -13,27 +13,27 @@ AR = ar
 BLAS_LIBS = -lblas
 C_VISIBILITY = -fvisibility=hidden
 CC = gcc
-CFLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong $(LTO)
+CFLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fno-plt $(LTO)
 CPICFLAGS = -fpic
 CPPFLAGS = -D_FORTIFY_SOURCE=2
 CXX = g++ 
 CXXCPP = $(CXX) -E
-CXXFLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong $(LTO)
+CXXFLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fno-plt $(LTO)
 CXXPICFLAGS = -fpic
 CXX98 = g++
-CXX98FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong
+CXX98FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fno-plt
 CXX98PICFLAGS = -fpic
 CXX98STD = -std=gnu++98
 CXX11 = g++
-CXX11FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong
+CXX11FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fno-plt
 CXX11PICFLAGS = -fpic
 CXX11STD = -std=gnu++11
 CXX14 = g++
-CXX14FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong
+CXX14FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fno-plt
 CXX14PICFLAGS = -fpic
-CXX14STD = 
+CXX14STD = -std=gnu++14
 CXX17 = g++
-CXX17FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong
+CXX17FLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fno-plt
 CXX17PICFLAGS = -fpic
 CXX17STD = -std=gnu++17
 DYLIB_EXT = .so
@@ -71,27 +71,27 @@ LAPACK_LIBS = -llapack
 ## we only need this is if it is external, as otherwise link to R
 LIBINTL= 
 LIBM = -lm
-LIBR0 = -L$(R_HOME)/lib$(R_ARCH)
+LIBR0 = -L"$(R_HOME)/lib$(R_ARCH)"
 LIBR1 = -lR
-LIBR = -L$(R_HOME)/lib$(R_ARCH) -lR
-LIBS =  -lpcre -llzma -lbz2 -lz -lrt -ldl -lm -licuuc -licui18n
+LIBR = -L"$(R_HOME)/lib$(R_ARCH)" -lR
+LIBS =  -lpcre2-8 -lpcre -llzma -lbz2 -lz -ltirpc -lrt -ldl -lm -licuuc -licui18n
 ## needed by R CMD config
 LIBnn = lib
 LIBTOOL = $(SHELL) "$(R_HOME)/bin/libtool"
-LDFLAGS = -Wl,-O1,--sort-common,--as-needed,-z,relro
+LDFLAGS = -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now
 LTO = 
 ## needed to build applications linking to static libR
 MAIN_LD = $(CC)
 MAIN_LDFLAGS = -Wl,--export-dynamic -fopenmp
 MAIN_LINK = $(MAIN_LD) $(MAIN_LDFLAGS) $(LDFLAGS)
-MKINSTALLDIRS = $(R_HOME)/bin/mkinstalldirs
+MKINSTALLDIRS = "$(R_HOME)/bin/mkinstalldirs"
 OBJC = 
 OBJCFLAGS =  $(LTO)
 OBJC_LIBS = 
 OBJCXX = 
 R_ARCH = 
 RANLIB = ranlib
-SAFE_FFLAGS = -g -O2 -ffloat-store
+SAFE_FFLAGS = -g -O2 -msse2 -mfpmath=sse
 SED = /usr/bin/sed
 SHELL = /bin/sh
 SHLIB_CFLAGS = 
@@ -128,7 +128,7 @@ YACC = bison -y
 
 ## legacy
 CXX1X = g++
-CXX1XFLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong
+CXX1XFLAGS = -march=x86-64 -mtune=generic -O2 -pipe -fstack-protector-strong -fno-plt
 CXX1XPICFLAGS = -fpic
 CXX1XSTD = -std=gnu++11
 SHLIB_CXX1XLD = $(CXX11) $(CXX11STD)
@@ -139,7 +139,7 @@ SHLIB_CXX1XLDFLAGS = -shared
 STATIC_LIBR = # -Wl,--whole-archive "$(R_HOME)/lib$(R_ARCH)/libR.a" -Wl,--no-whole-archive $(BLAS_LIBS) $(FLIBS)  $(LIBINTL) -lreadline  $(LIBS)
 
 R_XTRA_CFLAGS = 
-R_XTRA_CPPFLAGS =  -I$(R_INCLUDE_DIR) -DNDEBUG
+R_XTRA_CPPFLAGS =  -I"$(R_INCLUDE_DIR)" -DNDEBUG
 R_XTRA_CXXFLAGS = 
 R_XTRA_FFLAGS = 
 

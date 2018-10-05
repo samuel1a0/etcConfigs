@@ -31,9 +31,10 @@
     <icon>utilities-terminal</icon>
     <patterns>*</patterns>
     <name>Open Terminal Here</name>
+    <name xml:lang="am">ተርሚናል እዚህ ክፈት</name>
     <name xml:lang="ar">إفتح الطرفية هنا</name>
     <name xml:lang="ast">Abrir la terminal equí</name>
-    <name xml:lang="be">Адкрыць тут тэрмінал</name>
+    <name xml:lang="be">Адкрыць тэрмінал тут</name>
     <name xml:lang="bg">Отваряне на терминал тук</name>
     <name xml:lang="bn">এখানে টার্মিনাল খুলুন</name>
     <name xml:lang="ca">Obre un terminal aquí</name>
@@ -74,7 +75,8 @@
     <name xml:lang="ro">Deschide aici un terminal</name>
     <name xml:lang="ru">Открыть терминал</name>
     <name xml:lang="sk">Otvoriť v termináli</name>
-    <name xml:lang="sq">Hap Terminalin Këtu</name>
+    <name xml:lang="sl">Tukaj odpri terminal</name>
+    <name xml:lang="sq">Hape Terminalin Këtu</name>
     <name xml:lang="sr">Овде отвори терминал</name>
     <name xml:lang="sv">Öppna terminal här</name>
     <name xml:lang="te">టెర్మినల్‌ను ఇక్కడ తెరువు</name>
@@ -90,9 +92,10 @@
     <name xml:lang="zh_TW">在此開啟終端機</name>
     <command>exo-open --working-directory %f --launch TerminalEmulator</command>
     <description>Example for a custom action</description>
+    <description xml:lang="am">የግል ተግባር ምሳሌ</description>
     <description xml:lang="ar">مثال لإجراء مخصص</description>
     <description xml:lang="ast">Exemplu d'una aición personalizada</description>
-    <description xml:lang="be">Прыклад адмысловага дзеяньня</description>
+    <description xml:lang="be">Прыклад адвольнага дзеяння</description>
     <description xml:lang="bg">Пример за потребителско действие</description>
     <description xml:lang="bn">পছন্দসই কাজের জন্য উদাহরণ</description>
     <description xml:lang="ca">Exemple d'acció personalitzada</description>
@@ -106,8 +109,9 @@
     <description xml:lang="es">Ejemplo de una acción personalizada</description>
     <description xml:lang="et">Kohandatud tegevuse näidis</description>
     <description xml:lang="eu">Ekintza pertsonalizatu adibidea</description>
+    <description xml:lang="fa_IR">مثال برای یک کنش سفارشی</description>
     <description xml:lang="fi">Esimerkki mukautetusta toiminnosta</description>
-    <description xml:lang="fr">Exemple d'une action personnalisée</description>
+    <description xml:lang="fr">Exemple d’une action personnalisée</description>
     <description xml:lang="gl">Exemplo dunha acción personalizada</description>
     <description xml:lang="he">דוגמה של פעולה מותאמת אישית</description>
     <description xml:lang="hr">Primjer prilagođene radnje</description>
@@ -132,6 +136,7 @@
     <description xml:lang="ro">Exemplu de acțiune personalizată</description>
     <description xml:lang="ru">Пример особого действия</description>
     <description xml:lang="sk">Príklad vlastnej akcie</description>
+    <description xml:lang="sl">Primer prirejenega dejanja</description>
     <description xml:lang="sq">Shembull për veprim vetjak</description>
     <description xml:lang="sr">Пример за произвољну радњу</description>
     <description xml:lang="sv">Exempel för en anpassad åtgärd</description>

@@ -40,8 +40,8 @@ TAR=${TAR-'/usr/bin/tar'}
 ## System and compiler types.
 R_SYSTEM_ABI='linux,gcc,gxx,gfortran,?'
 
-R_LIBS_USER=${R_LIBS_USER-'~/R/x86_64-pc-linux-gnu-library/3.4'}
-#R_LIBS_USER=${R_LIBS_USER-'~/Library/R/3.4/library'}
+R_LIBS_USER=${R_LIBS_USER-'~/R/x86_64-pc-linux-gnu-library/3.5'}
+#R_LIBS_USER=${R_LIBS_USER-'~/Library/R/3.5/library'}
 
 ### Local Variables: ***
 ### mode: sh ***

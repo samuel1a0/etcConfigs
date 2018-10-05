@@ -1,11 +1,11 @@
 root:x:0:root
 bin:x:1:root,bin,daemon
-daemon:x:2:root,bin,daemon
+daemon:x:2:bin,daemon,mongodb,root
 sys:x:3:root,bin
 adm:x:4:root,daemon
 tty:x:5:
 disk:x:6:root
-lp:x:7:daemon,samuel
+lp:x:7:cups,daemon,samuel
 mem:x:8:
 kmem:x:9:
 wheel:x:10:root,samuel
@@ -62,3 +62,6 @@ plex:x:994:
 gdm:x:120:
 adbusers:x:991:
 lightdm:x:620:
+render:x:990:
+cups:x:209:
+mongodb:x:989:

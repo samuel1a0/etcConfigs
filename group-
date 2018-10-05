@@ -62,3 +62,4 @@ plex:x:994:
 gdm:x:120:
 adbusers:x:991:
 lightdm:x:620:
+render:x:990:

@@ -110,6 +110,7 @@
 \addlanguage{marathi}{loadhyph-mr.tex}{}{1}{1}
 \addlanguage{oriya}{loadhyph-or.tex}{}{1}{1}
 \addlanguage{panjabi}{loadhyph-pa.tex}{}{1}{1}
+\addlanguage{pali}{loadhyph-pi.tex}{}{1}{1}
 \addlanguage{tamil}{loadhyph-ta.tex}{}{1}{1}
 \addlanguage{telugu}{loadhyph-te.tex}{}{1}{1}
 % from hyphen-indonesian:
