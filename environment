@@ -3,3 +3,4 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
+PYTHONPATH=/usr/local/lib/python3.7/site-packages:
